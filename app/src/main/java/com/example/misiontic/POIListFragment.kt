@@ -19,14 +19,12 @@ class POIListFragment(var data:String) : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        Log.d("tag", "onCreate")
     }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        Log.d("tag", "onCreateView")
         binding = FragmentPoiListBinding.inflate(layoutInflater, container, false)
         initRecycler()
         createPOI()
@@ -35,8 +33,6 @@ class POIListFragment(var data:String) : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        Log.d("tag", "onViewCreated")
-
     }
 
     private fun initRecycler() {
