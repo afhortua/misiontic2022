@@ -19,6 +19,7 @@ class POIDetailFragment(var POIid: Int) : Fragment() {
     private lateinit var binding: FragmentPoiDetailBinding
     private lateinit var todoAdapter: ToDoPOIAdapter
     private lateinit var todoList: ArrayList<ToDoPOI>
+    private lateinit var titulo:String
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -36,6 +37,9 @@ class POIDetailFragment(var POIid: Int) : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         initRecycler()
         createDetailPOI(POIid)
+        with(this.context as AppCompatActivity){
+            this.setTitle(titulo.toString())
+        }
     }
 
     private fun loadData(inFile: String): String {
@@ -61,14 +65,13 @@ class POIDetailFragment(var POIid: Int) : Fragment() {
         val data = loadData("poi_detail.json")
         try {
             val poiDetailJSON = JSONArray(data).getJSONObject(POIid)
-            binding.titulo.text=poiDetailJSON.getString("name")
-            binding.temperaturaLorem.text=poiDetailJSON.getString("temperature")
-            binding.infoLorem.text=poiDetailJSON.getString("description")
-            binding.ubicacionLorem.text=poiDetailJSON.getString("location")
+            titulo = poiDetailJSON.getString("name")
+            binding.temperaturaLorem.text = poiDetailJSON.getString("temperature")
+            binding.infoLorem.text = poiDetailJSON.getString("description")
+            binding.ubicacionLorem.text = poiDetailJSON.getString("location")
             Picasso.get().load(poiDetailJSON.getString("image")).into(binding.foto)
             val poiToDo = poiDetailJSON.getJSONArray("todo")
             createTODO(poiToDo.toString())
-            Log.d("TODO",poiToDo.length().toString())
 
         } catch (e: JSONException) {
             e.printStackTrace()
@@ -77,13 +80,13 @@ class POIDetailFragment(var POIid: Int) : Fragment() {
 
     private fun initRecycler() {
         todoList = arrayListOf()
-        val layout = LinearLayoutManager(this.context,LinearLayoutManager.HORIZONTAL,false)
-        binding.rvPoiToDo.layoutManager=layout
+        val layout = LinearLayoutManager(this.context, LinearLayoutManager.HORIZONTAL, false)
+        binding.rvPoiToDo.layoutManager = layout
         todoAdapter = ToDoPOIAdapter(todoList)
         binding.rvPoiToDo.adapter = todoAdapter
     }
 
-    private fun createTODO(data:String) {
+    private fun createTODO(data: String) {
         try {
             val poiJSON = JSONArray(data)
             for (i in 0 until poiJSON.length()) {
@@ -91,7 +94,7 @@ class POIDetailFragment(var POIid: Int) : Fragment() {
                 val todo = ToDoPOI(
                     todoJSON.getString("name"),
                     todoJSON.getString("todo")
-                    )
+                )
                 todoList.add(todo)
             }
             todoAdapter.notifyDataSetChanged()

@@ -22,6 +22,7 @@ class POIListAdapter (var poi:ArrayList<POI>): RecyclerView.Adapter<POIListAdapt
         holder.itemView.setOnClickListener(){
             val act=it.context as AppCompatActivity
             act.supportFragmentManager.beginTransaction().replace(R.id.frag,POIDetailFragment(poi[position].id)).addToBackStack(null).commit()
+
         }
         with(holder){
             with(poi[position]){

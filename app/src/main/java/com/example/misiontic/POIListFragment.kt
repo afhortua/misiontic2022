@@ -17,7 +17,7 @@ class POIListFragment() : Fragment() {
     private lateinit var binding: FragmentPoiListBinding
     private lateinit var poiAdapter: POIListAdapter
     private lateinit var poiList: ArrayList<POI>
-
+    
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
     }
@@ -34,6 +34,10 @@ class POIListFragment() : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        with(this.context as AppCompatActivity){
+            this.setTitle("Lista POI")
+        }
+
     }
 
     private fun initRecycler() {
@@ -45,8 +49,7 @@ class POIListFragment() : Fragment() {
 
     private fun loadData(inFile: String): String {
         var content = ""
-        val cont=this.context as AppCompatActivity
-        with(cont){
+        with(this.context as AppCompatActivity){
             try {
                 val stream = assets.open(inFile)
                 val size = stream.available()

@@ -17,5 +17,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
         transaction.replace(binding.frag.id, POIListFragment())
         transaction.commit()
+
+
     }
 }
