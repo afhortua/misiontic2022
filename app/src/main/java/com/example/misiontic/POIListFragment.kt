@@ -1,20 +1,21 @@
 package com.example.misiontic
 
 import android.os.Bundle
-import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.misiontic.databinding.FragmentPoiListBinding
 import org.json.JSONArray
 import org.json.JSONException
+import java.io.IOException
 
-class POIListFragment(var data:String) : Fragment() {
+class POIListFragment() : Fragment() {
 
     private lateinit var binding: FragmentPoiListBinding
-    private lateinit var poiAdapter: PoiAdapter
+    private lateinit var poiAdapter: POIListAdapter
     private lateinit var poiList: ArrayList<POI>
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -38,22 +39,41 @@ class POIListFragment(var data:String) : Fragment() {
     private fun initRecycler() {
         poiList = arrayListOf()
         binding.rvList.layoutManager = LinearLayoutManager(this.context)
-        poiAdapter = PoiAdapter(poiList)
+        poiAdapter = POIListAdapter(poiList)
         binding.rvList.adapter = poiAdapter
+    }
 
+    private fun loadData(inFile: String): String {
+        var content = ""
+        val cont=this.context as AppCompatActivity
+        with(cont){
+            try {
+                val stream = assets.open(inFile)
+                val size = stream.available()
+                val buffer = ByteArray(size)
+                stream.read(buffer)
+                stream.close()
+                content = String(buffer)
+            } catch (e: IOException) {
+                e.printStackTrace()
+            }
+        }
 
+        return content
     }
 
     private fun createPOI() {
+        val data=loadData("poi_list.json")
         try {
-            val poisJSON = JSONArray(data)
-            for (i in 0 until poisJSON.length()) {
-                val userJSON = poisJSON.getJSONObject(i)
+            val poiJSON = JSONArray(data)
+            for (i in 0 until poiJSON.length()) {
+                val userJSON = poiJSON.getJSONObject(i)
                 val user = POI(
                     userJSON.getString("image"),
                     userJSON.getString("name"),
                     userJSON.getString("description"),
-                    userJSON.getString("location")
+                    userJSON.getString("location"),
+                    userJSON.getInt("id")
                 )
                 poiList.add(user)
             }

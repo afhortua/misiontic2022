@@ -3,48 +3,56 @@
     "image": "https://www.viajaporcolombia.com/images//recinto-manizales.jpg",
     "name": "Recinto del Pensamiento",
     "description": "Ubicado a 11 kilómetros de Manizales, cuenta con una extensión de 179 hectáreas. Ofrece una gran variedad de entornos naturales, como senderos, miradores, un observatorio de mariposas y un bosque orquídeas con más de 14 mil plantas.",
-    "location": "Manizales, Vía Panamericana"
+    "location": "Manizales, Vía Panamericana",
+    "id": "0"
   },
   {
     "image": "https://www.viajaporcolombia.com/images//aguadas-mirador.jpg",
     "name": "Aguadas",
     "description": "Su centro histórico fue declarado Monumento Nacional en 1982. Uno de sus principales atractivos es el Festival Nacional de Pasillo así como el Cerro de Monserrate, donde se pueden apreciar los departamentos de Antioquia, Risaralda y Chocó.",
-    "location": "Aguadas, Caldas"
+    "location": "Aguadas, Caldas",
+    "id": "1"
   },
   {
     "image": "https://blog.redbus.co/wp-content/uploads/2018/11/Nevado_del_Ruiz_-_Milton_H_Arias-768x356.jpg",
     "name": "Parque Nacional Los Nevados",
     "description": "Se encuentra ubicado en los departamentos de Risaralda, Tolima, Quindío y Caldas. Contiene varios nevados y otras formaciones naturales en clima frío, páramo y helado, además de mucha fauna y flora. Su temperatura oscila entre -3°C a 14°C",
-    "location": "Cordillera Central de los Andes Colombianos"
+    "location": "Cordillera Central de los Andes Colombianos",
+    "id": "2"
   },
   {
     "image": "https://fincasquindioya.com/wp-content/uploads/2017/01/parque_cafe_001-1536x864.jpg",
     "name": "Parque del Café",
     "description": "Es un parque temático inaugurado en 1995, es visitado por casi 920 mil turistas anualmente. Este lugar tiene una gran vista panorámica del departamento de Quindío. Contiene 40 atracciones mecánicas, acuáticas y temáticas. ",
-    "location": "Quindío"
+    "location": "Quindío",
+    "id": "3"
   },
   {
     "image": "https://viajareacolombia.com/wp-content/uploads/2020/07/catedral-de-manizales-1000x733.jpg",
     "name": "Basílica de N.S. del Rosario",
     "description": "La Catedral Basílica Metropolitana Nuestra Señora del Rosario de Manizales es la más alta de Colombia, con 115 metros de altura. Fue construída entre 1928 y 1939. Tiene un área de 2300 metros cuadrados y una capacidad para 5000 personas. ",
-    "location": "Manizales"
+    "location": "Manizales",
+    "id": "4"
   },
   {
     "image": "https://belalcazarcaldas.micolombiadigital.gov.co/sites/belalcazarcaldas/content/files/000442/22099_monumento-a-cristo-rey-belalcazar-caldas-colombia_1024x600.jpg",
     "name": "Monumento Cristo Rey",
     "description":"Una estatua de 45.5 metros de altura, ubicada en el Alto del Oso. En la cabeza de la estructura está ubicado un mirador donde es posible observar 11 municipios de Caldas, Quindío, Risaralda y Valle del Cauca. ",
-    "location": "Belalcázar, Caldas"
+    "location": "Belalcázar, Caldas",
+    "id": "5"
   },
   {
     "image": "https://cr00.epimg.net/radio/imagenes/2020/06/23/manizales/1592875891_959027_1592876051_noticia_normal_recorte1.jpg",
     "name": "Salamina",
     "description": "Fue fundada en 1825. Es conocida como 'La Ciudad Luz', dado que allí han nacido numerosos poetas, músicos, actores y escritores. Su arquitectura de casas de bahareque y tejas de barro es uno de sus principales atractivos.",
-    "location": "Salamina, Caldas"
+    "location": "Salamina, Caldas",
+    "id": "6"
   },
   {
     "image": "https://www.expreso.info/files/2020-08/Colombia_Aerocafe.jpg",
     "name": "Aeropuerto Internacional del Café",
     "description": "Un proyecto aeroportuario ubicado entre Manizales, Pereira y Armenia. Con una inversión inicial de casi 400 mil millones de pesos, se espera que entre en funcionamiento en 2024.",
-    "location": "Palestina, Caldas"
+    "location": "Palestina, Caldas",
+    "id": "7"
   }
 ]

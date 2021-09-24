@@ -1,0 +1,38 @@
+[
+  {
+    "description": "Ubicado a 11 kilómetros de Manizales, cuenta con una extensión de 179 hectáreas. Ofrece una gran variedad de entornos naturales, como senderos, miradores, un observatorio de mariposas y un bosque orquídeas con más de 14 mil plantas. (DETAIL)",
+    "location": "Manizales, Vía Panamericana",
+    "name": "Recinto del pensamiento",
+    "temperature": "10°C - 20°C",
+    "id": "0",
+    "image": "https://www.viajaporcolombia.com/images//recinto-manizales.jpg",
+    "todo": [
+      {
+        "name": "Avenida",
+        "todo": "Calle"
+      },
+      {
+        "name": "Museo",
+        "todo": "Arte"
+      }
+    ]
+  },
+  {
+    "description": "Su centro histórico fue declarado Monumento Nacional en 1982. Uno de sus principales atractivos es el Festival Nacional de Pasillo así como el Cerro de Monserrate, donde se pueden apreciar los departamentos de Antioquia, Risaralda y Chocó. (DETAIL)",
+    "location": "Aguadas, Caldas",
+    "name": "Aguadas",
+    "temperature": "14°C - 20°C",
+    "id": "1",
+    "image": "https://www.viajaporcolombia.com/images//aguadas-mirador.jpg",
+    "todo": [
+      {
+        "name": "Monumento a la Tejedora",
+        "todo": "Monumento"
+      },
+      {
+        "name": "Plaza",
+        "todo": "Edificio"
+      }
+    ]
+  }
+]
