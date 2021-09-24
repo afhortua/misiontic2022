@@ -12,7 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MisionTIC">
         <activity
-            android:name=".POI_list"
+            android:name=".MainActivity"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -21,8 +21,12 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".MainActivity"
-            android:exported="true"/>
+            android:name=".POI_list"
+            android:exported="true">
+        </activity>
+        <activity
+            android:name=".POIDetail"
+            android:exported="true" />
     </application>
 
 </manifest>
