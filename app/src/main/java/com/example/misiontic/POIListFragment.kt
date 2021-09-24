@@ -1,6 +1,7 @@
 package com.example.misiontic
 
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -18,13 +19,15 @@ class POIListFragment(var data:String) : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        Log.d("tag", "onCreate")
     }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        binding = FragmentPoiListBinding.inflate(layoutInflater,container,false)
+        Log.d("tag", "onCreateView")
+        binding = FragmentPoiListBinding.inflate(layoutInflater, container, false)
         initRecycler()
         createPOI()
         return binding.root
@@ -32,6 +35,8 @@ class POIListFragment(var data:String) : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        Log.d("tag", "onViewCreated")
+
     }
 
     private fun initRecycler() {
@@ -39,6 +44,8 @@ class POIListFragment(var data:String) : Fragment() {
         binding.rvList.layoutManager = LinearLayoutManager(this.context)
         poiAdapter = PoiAdapter(poiList)
         binding.rvList.adapter = poiAdapter
+
+
     }
 
     private fun createPOI() {
