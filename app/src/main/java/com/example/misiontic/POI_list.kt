@@ -23,10 +23,10 @@ class POI_list : AppCompatActivity() {
         createPOI()
     }
 
-    private fun initRecycler(){
+    private fun initRecycler() {
         poiList = arrayListOf()
         binding.rvPOI.layoutManager = LinearLayoutManager(this)
-        poiAdapter=PoiAdapter(poiList)
+        poiAdapter = PoiAdapter(poiList)
         binding.rvPOI.adapter = poiAdapter
     }
 
@@ -65,3 +65,4 @@ class POI_list : AppCompatActivity() {
         }
     }
 }
+

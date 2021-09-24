@@ -8,7 +8,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         val trans = supportFragmentManager.beginTransaction()
-        val frag = POIDetail()
+        val frag = POIDetailFragment()
         trans.replace(R.id.frag, frag)
         trans.commit()
     }
