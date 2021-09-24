@@ -1,52 +1,47 @@
 package com.example.misiontic
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.fragment.app.Fragment
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.misiontic.databinding.ActivityPoiListBinding
+import com.example.misiontic.databinding.FragmentPoiListBinding
 import org.json.JSONArray
 import org.json.JSONException
-import java.io.IOException
 
-class POI_list : AppCompatActivity() {
+class POIListFragment(var data:String) : Fragment() {
 
-    private lateinit var binding: ActivityPoiListBinding
+    private lateinit var binding: FragmentPoiListBinding
     private lateinit var poiAdapter: PoiAdapter
     private lateinit var poiList: ArrayList<POI>
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityPoiListBinding.inflate(layoutInflater)
-        setContentView(binding.root)
+    }
 
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        binding = FragmentPoiListBinding.inflate(layoutInflater,container,false)
         initRecycler()
         createPOI()
+        return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
     }
 
     private fun initRecycler() {
         poiList = arrayListOf()
-        binding.rvPOI.layoutManager = LinearLayoutManager(this)
+        binding.rvList.layoutManager = LinearLayoutManager(this.context)
         poiAdapter = PoiAdapter(poiList)
-        binding.rvPOI.adapter = poiAdapter
-    }
-
-    private fun loadData(inFile: String): String {
-        var content = ""
-        try {
-            val stream = assets.open(inFile)
-            val size = stream.available()
-            val buffer = ByteArray(size)
-            stream.read(buffer)
-            stream.close()
-            content = String(buffer)
-        } catch (e: IOException) {
-            e.printStackTrace()
-        }
-        return content
+        binding.rvList.adapter = poiAdapter
     }
 
     private fun createPOI() {
-        val data = loadData("poi_list.json")
         try {
             val poisJSON = JSONArray(data)
             for (i in 0 until poisJSON.length()) {
@@ -65,4 +60,3 @@ class POI_list : AppCompatActivity() {
         }
     }
 }
-
