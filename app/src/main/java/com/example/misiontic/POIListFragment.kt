@@ -1,6 +1,7 @@
 package com.example.misiontic
 
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -76,8 +77,11 @@ class POIListFragment() : Fragment() {
                     userJSON.getString("name"),
                     userJSON.getString("description"),
                     userJSON.getString("location"),
-                    userJSON.getInt("id")
+                    userJSON.getString("detail"),
+                    userJSON.getString("temperature"),
+                    userJSON.getString("todo")
                 )
+                Log.d("poi",user.toString())
                 poiList.add(user)
             }
             poiAdapter.notifyDataSetChanged()

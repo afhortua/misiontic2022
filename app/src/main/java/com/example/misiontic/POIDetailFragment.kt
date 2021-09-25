@@ -14,12 +14,12 @@ import org.json.JSONArray
 import org.json.JSONException
 import java.io.IOException
 
-class POIDetailFragment(var POIid: Int) : Fragment() {
+class POIDetailFragment(var detailPOI: POI) : Fragment() {
 
     private lateinit var binding: FragmentPoiDetailBinding
     private lateinit var todoAdapter: ToDoPOIAdapter
     private lateinit var todoList: ArrayList<ToDoPOI>
-    private lateinit var titulo:String
+    private lateinit var titulo: String
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -36,46 +36,19 @@ class POIDetailFragment(var POIid: Int) : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         initRecycler()
-        createDetailPOI(POIid)
-        with(this.context as AppCompatActivity){
-            this.setTitle(titulo.toString())
+        createDetailPOI()
+        with(this.context as AppCompatActivity) {
+            this.setTitle(titulo)
         }
     }
 
-    private fun loadData(inFile: String): String {
-        var content = ""
-        val cont = this.context as AppCompatActivity
-        with(cont) {
-            try {
-                val stream = assets.open(inFile)
-                val size = stream.available()
-                val buffer = ByteArray(size)
-                stream.read(buffer)
-                stream.close()
-                content = String(buffer)
-            } catch (e: IOException) {
-                e.printStackTrace()
-            }
-        }
-
-        return content
-    }
-
-    private fun createDetailPOI(POIid: Int) {
-        val data = loadData("poi_detail.json")
-        try {
-            val poiDetailJSON = JSONArray(data).getJSONObject(POIid)
-            titulo = poiDetailJSON.getString("name")
-            binding.temperaturaLorem.text = poiDetailJSON.getString("temperature")
-            binding.infoLorem.text = poiDetailJSON.getString("description")
-            binding.ubicacionLorem.text = poiDetailJSON.getString("location")
-            Picasso.get().load(poiDetailJSON.getString("image")).into(binding.foto)
-            val poiToDo = poiDetailJSON.getJSONArray("todo")
-            createTODO(poiToDo.toString())
-
-        } catch (e: JSONException) {
-            e.printStackTrace()
-        }
+    private fun createDetailPOI() {
+        titulo = detailPOI.name
+        binding.temperaturaLorem.text = detailPOI.temperature
+        binding.infoLorem.text = detailPOI.detail
+        binding.ubicacionLorem.text = detailPOI.location
+        Picasso.get().load(detailPOI.image).into(binding.foto)
+        createTODO(detailPOI.todo)
     }
 
     private fun initRecycler() {
@@ -86,7 +59,7 @@ class POIDetailFragment(var POIid: Int) : Fragment() {
         binding.rvPoiToDo.adapter = todoAdapter
     }
 
-    private fun createTODO(data: String) {
+    private fun createTODO(data: String?) {
         try {
             val poiJSON = JSONArray(data)
             for (i in 0 until poiJSON.length()) {
