@@ -6,12 +6,16 @@
         <entry key="app/src/main/res/layout-land/activity_main.xml" value="0.10625" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_poi_list.xml" value="0.184375" />
+        <entry key="app/src/main/res/layout/fragment_about.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_poi_detail.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_poi_list.xml" value="0.18" />
+        <entry key="app/src/main/res/layout/fragment_settings.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_test.xml" value="0.19791666666666666" />
         <entry key="app/src/main/res/layout/item_poi.xml" value="0.19791666666666666" />
         <entry key="app/src/main/res/layout/item_poi_list.xml" value="0.25" />
         <entry key="app/src/main/res/layout/item_poi_todo.xml" value="0.25" />
+        <entry key="app/src/main/res/menu/overflow.xml" value="0.33" />
+        <entry key="app/src/main/res/xml/root_preferences.xml" value="0.33" />
       </map>
     </option>
   </component>
