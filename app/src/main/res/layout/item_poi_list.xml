@@ -48,6 +48,7 @@
             android:layout_marginEnd="8dp"
             android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas posuere, lectus sit amet maximus aliquam, elit sem fermentum lectus, eu finibus quam magna sit amet arcu. Nulla velit elit, pulvinar ut pellentesque et, hendrerit sed mi. Donec"
             android:textSize="14sp"
+            android:justificationMode="inter_word"
             app:layout_constraintTop_toBottomOf="@id/tv_name" />
 
         <TextView

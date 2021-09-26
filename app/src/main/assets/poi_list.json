@@ -4,34 +4,43 @@
     "name": "Recinto del Pensamiento",
     "description": "Ubicado a 11 kilómetros de Manizales, cuenta con una extensión de 179 hectáreas. Ofrece una gran variedad de entornos naturales, como senderos, miradores, un observatorio de mariposas y un bosque orquídeas con más de 14 mil plantas.",
     "location": "Manizales, Vía Panamericana",
-    "detail": "Ubicado a 11 kilómetros de Manizales, cuenta con una extensión de 179 hectáreas. Ofrece una gran variedad de entornos naturales, como senderos, miradores, un observatorio de mariposas y un bosque orquídeas con más de 14 mil plantas. (DETAIL)",
-    "temperature": "10°C - 20°C",
+    "detail": "Hace más de 80 años este espacio fue un refugio para niños huérfanos. Actualmente es propiedad del Comité de Cafeteros de Caldas y busca ser un espacio propicio para el desarrollo y promoción de las familias cafeteras. \n \n Este espacio de 179 hectáreas es formado en su mayoría por una reserva natural. Allí se encuentran varios lugares rodeados de hermosa naturaleza.",
+    "temperature": "19°C",
     "todo": [
       {
-        "name": "Avenida",
-        "todo": "Calle"
+        "name": "Mirador de aves",
+        "todo": "Con 150 especies inmersas en un bosque de niebla. Destaca una variedad de colibrís.",
+        "image": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/15/40/3e/68/dsc09983-largejpg.jpg?w=1000&h=-1&s=1"
       },
       {
-        "name": "Museo",
-        "todo": "Arte"
+        "name": "Senda de Oriente",
+        "todo": "Una obra de arte oriental, con un bosque miniatura de bonsáis y sakuras entregadas por Japón.",
+        "image": "http://revistas.elheraldo.co/sites/default/files/2014/05/08/articulo/dscn0087.jpg"
       }
     ]
   },
   {
-    "image": "https://www.viajaporcolombia.com/images//aguadas-mirador.jpg",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Cerro_Tutelar_del_Pipint%C3%A1_-_panor%C3%A1mica_de_Aguadas_02.jpg/800px-Cerro_Tutelar_del_Pipint%C3%A1_-_panor%C3%A1mica_de_Aguadas_02.jpg",
     "name": "Aguadas",
     "description": "Su centro histórico fue declarado Monumento Nacional en 1982. Uno de sus principales atractivos es el Festival Nacional de Pasillo así como el Cerro de Monserrate, donde se pueden apreciar los departamentos de Antioquia, Risaralda y Chocó.",
     "location": "Aguadas, Caldas",
-    "detail": "Su centro histórico fue declarado Monumento Nacional en 1982. Uno de sus principales atractivos es el Festival Nacional de Pasillo así como el Cerro de Monserrate, donde se pueden apreciar los departamentos de Antioquia, Risaralda y Chocó. (DETAIL)",
-    "temperature": "15°C - 25°C",
+    "detail": "Un pueblo típico ubicado en Caldas, es conocido como la Ciudad de las Brumas, por la constante niebla. Además de la fama por sus sombreros aguadeños, fabricados con iraca. \n \n En este lugar se lleva a cabo el Festival Nacional de Pasillo, declarado Patrimonio Cultural de la Nación en 2005.",
+    "temperature": "15°C",
     "todo": [
       {
-        "name": "Estatua",
-        "todo": "Monumento"
+        "name": "Monumento a la tejedora",
+        "todo": "Monumento a una tejedora de sombreros aguadeños. Ubicado en el Parque de la Habana.",
+        "image": "https://creciendoenelcamino.com/wp-content/uploads/2017/02/foto-13-768x512.jpg"
       },
       {
-        "name": "Plaza",
-        "todo": "Lugar"
+        "name": "Iglesia San Antonio de Armas",
+        "todo": "Centro de peregrinación y culto al Santo patrono de los pobres. Aquí se conservan reliquias de casi 500 años.",
+        "image": "https://i1.wp.com/elturismoencolombia.com/wp-content/uploads/2019/01/aguadas-turismo-caldas-colombia-travel10.jpg?w=903&ssl=1"
+      },
+      {
+        "name": "Casa de la Cultura",
+        "todo": "Centro de la cultura aguadeña, sede del Museo Nacional del Sombrero, con 300 ejemplares de todo el país.",
+        "image": "https://aguadascaldas.micolombiadigital.gov.co/sites/aguadascaldas/content/files/000003/129_casa-de-la-cultura-francisco-giraldo_1024x600.png"
       }
     ]
   },
@@ -39,17 +48,19 @@
     "image": "https://blog.redbus.co/wp-content/uploads/2018/11/Nevado_del_Ruiz_-_Milton_H_Arias-768x356.jpg",
     "name": "Parque Nacional Los Nevados",
     "description": "Se encuentra ubicado en los departamentos de Risaralda, Tolima, Quindío y Caldas. Contiene varios nevados y otras formaciones naturales en clima frío, páramo y helado, además de mucha fauna y flora. Su temperatura oscila entre -3°C a 14°C",
-    "location": "Cordillera Central de los Andes Colombianos",
-    "detail": "Su centro histórico fue declarado Monumento Nacional en 1982. Uno de sus principales atractivos es el Festival Nacional de Pasillo así como el Cerro de Monserrate, donde se pueden apreciar los departamentos de Antioquia, Risaralda y Chocó. (DETAIL)",
-    "temperature": "15°C - 25°C",
+    "location": "Cordillera de los Andes Colombianos",
+    "detail": "Con una extensión de 58 mil hectáreas, en este Parque Nacional se ubican varios nevados, lagunas y glaciares. Hace parte de la jurisdicción de siete municipios en cuatro departamentos.  \n \n Es un importante recurso natural para el país, pues aquí nacen importantes ríos y lagunas cuyas aguas se utilizan para proveer a los habitantes de ciudades cercanas.",
+    "temperature": "-3°C - 14°C",
     "todo": [
       {
-        "name": "Estatua",
-        "todo": "Monumento"
+        "name": "Volcán Nevado del Ruíz",
+        "todo": "Con una altitud de 5321 msnm, es también el más septentrional de los volcanes activos de Los Andes",
+        "image": "https://cr00.epimg.net/radio/imagenes/2020/08/26/manizales/1598464907_864804_1598465004_noticia_normal_recorte1.jpg"
       },
       {
-        "name": "Plaza",
-        "todo": "Lugar"
+        "name": "Laguna del Otún",
+        "todo": "Un importante recurso natural, pues es la fuente hídrica de la ciudad de Pereira.",
+        "image": "https://blog.redbus.co/wp-content/uploads/2020/03/32365152525_5d1acbb839_b-696x522.jpg"
       }
     ]
   },
@@ -62,12 +73,14 @@
     "temperature": "15°C - 25°C",
     "todo": [
       {
-        "name": "Campo",
-        "todo": "Café"
+        "name": "Estatua",
+        "todo": "Monumento",
+        "image": "https://www.viajaporcolombia.com/images//recinto-manizales.jpg"
       },
       {
-        "name": "Parque",
-        "todo": "Atracciones"
+        "name": "Plaza",
+        "todo": "Lugar",
+        "image": "https://www.viajaporcolombia.com/images//recinto-manizales.jpg"
       }
     ]
   },
@@ -81,33 +94,17 @@
     "todo": [
       {
         "name": "Estatua",
-        "todo": "Monumento"
+        "todo": "Monumento",
+        "image": "https://www.viajaporcolombia.com/images//recinto-manizales.jpg"
       },
       {
         "name": "Plaza",
-        "todo": "Lugar"
+        "todo": "Lugar",
+        "image": "https://www.viajaporcolombia.com/images//recinto-manizales.jpg"
       }
     ]
   },
-  {
-    "image": "https://belalcazarcaldas.micolombiadigital.gov.co/sites/belalcazarcaldas/content/files/000442/22099_monumento-a-cristo-rey-belalcazar-caldas-colombia_1024x600.jpg",
-    "name": "Monumento Cristo Rey",
-    "description": "Una estatua de 45.5 metros de altura, ubicada en el Alto del Oso. En la cabeza de la estructura está ubicado un mirador donde es posible observar 11 municipios de Caldas, Quindío, Risaralda y Valle del Cauca. ",
-    "location": "Belalcázar, Caldas",
-    "detail": "Su centro histórico fue declarado Monumento Nacional en 1982. Uno de sus principales atractivos es el Festival Nacional de Pasillo así como el Cerro de Monserrate, donde se pueden apreciar los departamentos de Antioquia, Risaralda y Chocó. (DETAIL)",
-    "temperature": "15°C - 25°C",
-    "todo": [
-      {
-        "name": "Estatua",
-        "todo": "Monumento"
-      },
-      {
-        "name": "Plaza",
-        "todo": "Lugar"
-      }
-    ]
-  },
-  {
+   {
     "image": "https://cr00.epimg.net/radio/imagenes/2020/06/23/manizales/1592875891_959027_1592876051_noticia_normal_recorte1.jpg",
     "name": "Salamina",
     "description": "Fue fundada en 1825. Es conocida como 'La Ciudad Luz', dado que allí han nacido numerosos poetas, músicos, actores y escritores. Su arquitectura de casas de bahareque y tejas de barro es uno de sus principales atractivos.",
@@ -117,11 +114,13 @@
     "todo": [
       {
         "name": "Estatua",
-        "todo": "Monumento"
+        "todo": "Monumento",
+        "image": "https://www.viajaporcolombia.com/images//recinto-manizales.jpg"
       },
       {
         "name": "Plaza",
-        "todo": "Lugar"
+        "todo": "Lugar",
+        "image": "https://www.viajaporcolombia.com/images//recinto-manizales.jpg"
       }
     ]
   }

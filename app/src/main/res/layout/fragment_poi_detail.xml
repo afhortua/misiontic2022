@@ -14,49 +14,99 @@
         <ImageView
             android:id="@+id/foto"
             android:layout_width="match_parent"
-            android:layout_height="280dp"
-            android:src="@drawable/foto"
+            android:layout_height="260dp"
             android:scaleType="fitXY"
-            app:layout_constraintTop_toTopOf="parent"/>
+            android:src="@drawable/foto"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/infoLorem"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_margin="10dp"
             android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In dictum molestie orci quis finibus. Proin vehicula consequat volutpat. Vivamus vel lectus id sem efficitur iaculis sollicitudin rhoncus quam. Sed sodales nisl ac turpis fermentum iaculis. Pellentesque tristique in elit quis maximus. Fusce auctor dui vel laoreet pulvinar. Fusce ultrices mollis odio non lobortis. "
-            android:textSize="20sp"
-            app:layout_constraintTop_toTopOf="parent"
-            android:layout_marginTop="300dp"/>
-
-        <TextView
-            android:id="@+id/ubicacionLorem"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="530dp"
-            android:text="Cordillera Central de los Andes Colombianos."
             android:textSize="18sp"
+            android:justificationMode="inter_word"
+            app:layout_constraintTop_toBottomOf="@+id/foto" />
+
+        <View
+            android:id="@+id/divider1"
+            android:layout_width="320dp"
+            android:layout_height="2dp"
+            android:layout_marginTop="10dp"
+            android:background="?android:attr/listDivider"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toBottomOf="@id/infoLorem" />
+
+        <ImageView
+            android:id="@+id/iv_temperatureIcon"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_margin="10dp"
+            android:src="@drawable/icontemperature"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/divider1" />
 
         <TextView
             android:id="@+id/temperaturaLorem"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="620dp"
+            android:layout_margin="10dp"
             android:text="-3°C - 14°C"
             android:textSize="18sp"
-            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/iv_temperatureIcon"
+            app:layout_constraintTop_toBottomOf="@id/divider1" />
+
+        <ImageView
+            android:id="@+id/iv_locationIcon"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_margin="10dp"
+            android:src="@drawable/iconlocation"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toBottomOf="@id/temperaturaLorem" />
+
+        <TextView
+            android:id="@+id/ubicacionLorem"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="Cordillera Central de los Andes Colombianos."
+            android:textSize="18sp"
+            app:layout_constraintStart_toEndOf="@id/iv_locationIcon"
+            app:layout_constraintTop_toBottomOf="@id/temperaturaLorem" />
+
+        <View
+            android:id="@+id/divider2"
+            android:layout_width="320dp"
+            android:layout_height="2dp"
+            android:background="?android:attr/listDivider"
+            app:layout_constraintTop_toBottomOf="@id/iv_locationIcon"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:id="@+id/tv_todo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:text="Lugares cercanos"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/divider2" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rvPoiToDo"
             android:layout_width="match_parent"
-            android:layout_height="170dp"
-            app:layout_constraintTop_toTopOf="parent"
-            android:layout_marginTop="670dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_todo"
             tools:listitem="@layout/item_poi_todo" />
+
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </ScrollView>

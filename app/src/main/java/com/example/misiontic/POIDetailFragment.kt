@@ -66,7 +66,8 @@ class POIDetailFragment(var detailPOI: POI) : Fragment() {
                 val todoJSON = poiJSON.getJSONObject(i)
                 val todo = ToDoPOI(
                     todoJSON.getString("name"),
-                    todoJSON.getString("todo")
+                    todoJSON.getString("todo"),
+                    todoJSON.getString("image")
                 )
                 todoList.add(todo)
             }

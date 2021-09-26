@@ -22,9 +22,9 @@ class ToDoPOIAdapter (var todo:ArrayList<ToDoPOI>): RecyclerView.Adapter<ToDoPOI
     override fun onBindViewHolder(holder: ToDoHolder, position: Int) {
         with(holder){
             with(todo[position]){
-                binding.tvName.text=this.name
-                binding.tvTodo.text=this.todo
-                //Picasso.get().load(this.image).into(binding.ivPoi)
+                binding.tvNameTodo.text=this.name
+                binding.tvDescriptionTodo.text=this.detail
+                Picasso.get().load(this.image).into(binding.ivPoiTodo)
             }
         }
     }
