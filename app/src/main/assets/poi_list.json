@@ -4,7 +4,7 @@
     "name": "Recinto del Pensamiento",
     "description": "Ubicado a 11 kilómetros de Manizales, cuenta con una extensión de 179 hectáreas. Ofrece una gran variedad de entornos naturales, como senderos, miradores, un observatorio de mariposas y un bosque orquídeas con más de 14 mil plantas.",
     "location": "Manizales, Vía Panamericana",
-    "detail": "Hace más de 80 años este espacio fue un refugio para niños huérfanos. Actualmente es propiedad del Comité de Cafeteros de Caldas y busca ser un espacio propicio para el desarrollo y promoción de las familias cafeteras. \n \n Este espacio de 179 hectáreas es formado en su mayoría por una reserva natural. Allí se encuentran varios lugares rodeados de hermosa naturaleza.",
+    "detail": "Hace más de 80 años este espacio fue un refugio para niños huérfanos. Actualmente es propiedad del Comité de Cafeteros de Caldas y busca ser un espacio propicio para el desarrollo y promoción de las familias cafeteras. \n\nEste espacio de 179 hectáreas es formado en su mayoría por una reserva natural. Allí se encuentran varios lugares rodeados de hermosa naturaleza.",
     "temperature": "19°C",
     "todo": [
       {
@@ -15,7 +15,7 @@
       {
         "name": "Senda de Oriente",
         "todo": "Una obra de arte oriental, con un bosque miniatura de bonsáis y sakuras entregadas por Japón.",
-        "image": "http://revistas.elheraldo.co/sites/default/files/2014/05/08/articulo/dscn0087.jpg"
+        "image": "https://media-cdn.tripadvisor.com/media/photo-s/07/41/52/a5/senda-de-oriente.jpg"
       }
     ]
   },
@@ -24,7 +24,7 @@
     "name": "Aguadas",
     "description": "Su centro histórico fue declarado Monumento Nacional en 1982. Uno de sus principales atractivos es el Festival Nacional de Pasillo así como el Cerro de Monserrate, donde se pueden apreciar los departamentos de Antioquia, Risaralda y Chocó.",
     "location": "Aguadas, Caldas",
-    "detail": "Un pueblo típico ubicado en Caldas, es conocido como la Ciudad de las Brumas, por la constante niebla. Además de la fama por sus sombreros aguadeños, fabricados con iraca. \n \n En este lugar se lleva a cabo el Festival Nacional de Pasillo, declarado Patrimonio Cultural de la Nación en 2005.",
+    "detail": "Un pueblo típico ubicado en Caldas, es conocido como la Ciudad de las Brumas, por la constante niebla. Además de la fama por sus sombreros aguadeños, fabricados con iraca. \n\nEn este lugar se lleva a cabo el Festival Nacional de Pasillo, declarado Patrimonio Cultural de la Nación en 2005.",
     "temperature": "15°C",
     "todo": [
       {
@@ -49,8 +49,8 @@
     "name": "Parque Nacional Los Nevados",
     "description": "Se encuentra ubicado en los departamentos de Risaralda, Tolima, Quindío y Caldas. Contiene varios nevados y otras formaciones naturales en clima frío, páramo y helado, además de mucha fauna y flora. Su temperatura oscila entre -3°C a 14°C",
     "location": "Cordillera de los Andes Colombianos",
-    "detail": "Con una extensión de 58 mil hectáreas, en este Parque Nacional se ubican varios nevados, lagunas y glaciares. Hace parte de la jurisdicción de siete municipios en cuatro departamentos.  \n \n Es un importante recurso natural para el país, pues aquí nacen importantes ríos y lagunas cuyas aguas se utilizan para proveer a los habitantes de ciudades cercanas.",
-    "temperature": "-3°C - 14°C",
+    "detail": "Con una extensión de 58 mil hectáreas, en este Parque Nacional se ubican varios nevados, lagunas y glaciares. Hace parte de la jurisdicción de siete municipios en cuatro departamentos.  \n\nEs un importante recurso natural para el país, pues aquí nacen importantes ríos y lagunas cuyas aguas se utilizan para proveer a los habitantes de ciudades cercanas.",
+    "temperature": "-3°C a 14°C",
     "todo": [
       {
         "name": "Volcán Nevado del Ruíz",
@@ -68,39 +68,49 @@
     "image": "https://fincasquindioya.com/wp-content/uploads/2017/01/parque_cafe_001-1536x864.jpg",
     "name": "Parque del Café",
     "description": "Es un parque temático inaugurado en 1995, es visitado por casi 920 mil turistas anualmente. Este lugar tiene una gran vista panorámica del departamento de Quindío. Contiene 40 atracciones mecánicas, acuáticas y temáticas. ",
-    "location": "Quindío",
-    "detail": "Su centro histórico fue declarado Monumento Nacional en 1982. Uno de sus principales atractivos es el Festival Nacional de Pasillo así como el Cerro de Monserrate, donde se pueden apreciar los departamentos de Antioquia, Risaralda y Chocó. (DETAIL)",
-    "temperature": "15°C - 25°C",
+    "location": "Montenegro, Quindío",
+    "detail": "Este parque se ubica en el corregimiento de Pueblo Tapao, en Montenegro, Quindío. Contiene dos teleféricos, jardines, de café. tres montañas rusas y otra gran cantidad de atracciones y lugares de interés. \n\nFue fundado por la Federación Nacional de Cafeteros, actualmente pertenece a la Fundación Parque de la Cultura Cafetera, una entidad sin ánimo de lucro que se dedica a la preservación del patrimonio cultural e históricos del café en el país. ",
+    "temperature": "21°C",
     "todo": [
       {
-        "name": "Estatua",
-        "todo": "Monumento",
-        "image": "https://www.viajaporcolombia.com/images//recinto-manizales.jpg"
+        "name": "Puente colgante",
+        "todo": "Esta imponente estructura une dos parque del parque. ",
+        "image": "https://live.staticflickr.com/7018/6507889397_93675c0b12_z.jpg"
       },
       {
-        "name": "Plaza",
-        "todo": "Lugar",
-        "image": "https://www.viajaporcolombia.com/images//recinto-manizales.jpg"
+        "name": "Museo del Café",
+        "todo": "Un viaje desde el orígen, industrialización hasta la exportación del café en el país.",
+        "image": "https://quindioaventurero.co/wp-content/uploads/2019/04/plaza-quindio-min-1080x675.jpg"
+      },
+      {
+        "name": "Jardín de café",
+        "todo": "Se han cultivado gran variedad de especies de café de diferente procedencia en el mundo",
+        "image": "https://parquedelcafearmenia.com/wp-content/uploads/2018/11/jardin-de-variedades-de-cafe.jpg"
       }
     ]
   },
   {
-    "image": "https://viajareacolombia.com/wp-content/uploads/2020/07/catedral-de-manizales-1000x733.jpg",
-    "name": "Basílica de N.S. del Rosario",
-    "description": "La Catedral Basílica Metropolitana Nuestra Señora del Rosario de Manizales es la más alta de Colombia, con 115 metros de altura. Fue construída entre 1928 y 1939. Tiene un área de 2300 metros cuadrados y una capacidad para 5000 personas. ",
-    "location": "Manizales",
-    "detail": "Su centro histórico fue declarado Monumento Nacional en 1982. Uno de sus principales atractivos es el Festival Nacional de Pasillo así como el Cerro de Monserrate, donde se pueden apreciar los departamentos de Antioquia, Risaralda y Chocó. (DETAIL)",
-    "temperature": "15°C - 25°C",
+    "image": "https://cdn.colombia.com/images/v2/turismo/sitios-turisticos/manizales/ciudad-manizales-800.webp",
+    "name": "Manizales",
+    "description": "'La Capital Mundial del Café', capital del departamento de Caldas, con más de 400 mil habitantes, es la ciudad más importante de la región.",
+    "location": "Manizales, Caldas",
+    "detail": "Se ubica en la parte sur del departamento de Caldas. Con más de 400 mil habitantes, produce el 68% del PIB de la región. \n\nEsta ciudad se caracteriza por su gran cantidad de eventos de música, arte, danzas, literatura. entre otros",
+    "temperature": "17°C",
     "todo": [
       {
-        "name": "Estatua",
-        "todo": "Monumento",
-        "image": "https://www.viajaporcolombia.com/images//recinto-manizales.jpg"
+        "name": "Feria de Manizales",
+        "todo": "Se realiza los primeros días de enero. Tiene sus raíces en la Feria de Abril en Sevilla, España.",
+        "image": "https://www.eltiempo.com/files/article_multimedia/uploads/2020/01/07/5e15185db0996.jpeg"
       },
       {
-        "name": "Plaza",
-        "todo": "Lugar",
-        "image": "https://www.viajaporcolombia.com/images//recinto-manizales.jpg"
+        "name": "Antigua Estación del Cable",
+        "todo": "Estación del antiguo sistema Manizales-Mariquita(Tolima).",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Estaci%C3%B3n_El_Cable_%282%29.JPG/280px-Estaci%C3%B3n_El_Cable_%282%29.JPG"
+      },
+      {
+        "name": "Basílica N.S. del Rosario",
+        "todo": "Es la catedral más alta del país, con 113 mts de alto. En la torre se aprecia un vista panorámica de la ciudad.",
+        "image": "https://viajandox.com.co/uploads/Catedral%20Nuestra%20Se%C3%B1ora_1.jpg"
       }
     ]
   },
@@ -109,18 +119,18 @@
     "name": "Salamina",
     "description": "Fue fundada en 1825. Es conocida como 'La Ciudad Luz', dado que allí han nacido numerosos poetas, músicos, actores y escritores. Su arquitectura de casas de bahareque y tejas de barro es uno de sus principales atractivos.",
     "location": "Salamina, Caldas",
-    "detail": "Su centro histórico fue declarado Monumento Nacional en 1982. Uno de sus principales atractivos es el Festival Nacional de Pasillo así como el Cerro de Monserrate, donde se pueden apreciar los departamentos de Antioquia, Risaralda y Chocó. (DETAIL)",
-    "temperature": "15°C - 25°C",
+    "detail": "Este pintoresco pueblo de arquitectura paisa se encuentra ubicado al norte del departamento de Caldas. Fue fundado el 8 de junio de 1825. \n\n Es conocido también como 'Ciudad Madre de los Pueblos', pues aquí nacieron los fundadores de numerosos municipios del departamento, como Manizales, Filadelfia, Santa Rosa de Cabal, entre otros. ",
+    "temperature": "22°C",
     "todo": [
       {
-        "name": "Estatua",
-        "todo": "Monumento",
-        "image": "https://www.viajaporcolombia.com/images//recinto-manizales.jpg"
+        "name": "Fuente Plaza de Bolívar",
+        "todo": "Esta fuente fue fabricada en Alemania como réplica de una ubicada en París, Francia.",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Salamina_main_plaza.JPG/800px-Salamina_main_plaza.JPG"
       },
       {
-        "name": "Plaza",
-        "todo": "Lugar",
-        "image": "https://www.viajaporcolombia.com/images//recinto-manizales.jpg"
+        "name": "Bosque de Palma de Cera",
+        "todo": "Ubicado en el corregimiento de San Félix, éstas palmas tienen hasta 60 años de edad.",
+        "image": "https://caldasecotravel.com/wp-content/uploads/2017/04/DSC00710-1-1067x800.jpg"
       }
     ]
   }
