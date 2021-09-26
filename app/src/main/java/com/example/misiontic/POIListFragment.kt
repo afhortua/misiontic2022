@@ -36,7 +36,7 @@ class POIListFragment() : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         with(this.context as AppCompatActivity){
-            this.setTitle("Lista POI")
+            this.setTitle("Caldas Turística")
         }
 
     }

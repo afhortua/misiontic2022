@@ -15,9 +15,5 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        transaction.replace(binding.frag.id, POIListFragment())
-        transaction.commit()
-
-
     }
 }
