@@ -13,11 +13,18 @@
         <action
             android:id="@+id/action_POIListFragment_to_settingsFragment"
             app:destination="@id/settingsFragment" />
+        <action
+            android:id="@+id/action_POIListFragment_to_POIDetailFragment"
+            app:destination="@id/POIDetailFragment" />
     </fragment>
     <fragment
         android:id="@+id/settingsFragment"
         android:name="com.example.misiontic.UI.SettingsFragment"
         android:label="fragment_settings"
         tools:layout="@xml/root_preferences" />
+    <fragment
+        android:id="@+id/POIDetailFragment"
+        android:name="com.example.misiontic.UI.POIDetailFragment"
+        android:label="POIDetailFragment" />
 
 </navigation>

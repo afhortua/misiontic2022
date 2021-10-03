@@ -7,6 +7,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.misiontic.models.POI
 import com.example.misiontic.adapters.POIListAdapter
@@ -14,13 +16,16 @@ import com.example.misiontic.databinding.FragmentPoiListBinding
 import org.json.JSONArray
 import org.json.JSONException
 import java.io.IOException
+import com.example.misiontic.viewmodel.POIviewModel
+import com.example.misiontic.R
 
 class POIListFragment() : Fragment() {
 
     private lateinit var binding: FragmentPoiListBinding
     private lateinit var poiAdapter: POIListAdapter
     private lateinit var poiList: ArrayList<POI>
-    
+    private lateinit var model: POIviewModel
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
     }
@@ -30,29 +35,38 @@ class POIListFragment() : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         binding = FragmentPoiListBinding.inflate(layoutInflater, container, false)
-        initRecycler()
-        createPOI()
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        with(this.context as AppCompatActivity){
+        with(this.context as AppCompatActivity) {
             this.setTitle("Caldas Turística")
         }
+        model = ViewModelProvider(requireActivity()).get(POIviewModel::class.java)
+        initRecycler()
+        createPOI()
+    }
 
+    private fun POIonClick(poi: POI) {
+        Log.d("onClick", "Click on: $poi")
+        model.select(poi)
+        findNavController().navigate(R.id.action_POIListFragment_to_POIDetailFragment)
     }
 
     private fun initRecycler() {
         poiList = arrayListOf()
         binding.rvList.layoutManager = LinearLayoutManager(this.context)
-        poiAdapter = POIListAdapter(poiList)
+        poiAdapter = POIListAdapter(poiList) { poi ->
+            POIonClick(poi)
+        }
+
         binding.rvList.adapter = poiAdapter
     }
 
     private fun loadData(inFile: String): String {
         var content = ""
-        with(this.context as AppCompatActivity){
+        with(this.context as AppCompatActivity) {
             try {
                 val stream = assets.open(inFile)
                 val size = stream.available()
@@ -69,7 +83,7 @@ class POIListFragment() : Fragment() {
     }
 
     private fun createPOI() {
-        val data=loadData("poi_list.json")
+        val data = loadData("poi_list.json")
         try {
             val poiJSON = JSONArray(data)
             for (i in 0 until poiJSON.length()) {
@@ -83,7 +97,7 @@ class POIListFragment() : Fragment() {
                     userJSON.getString("temperature"),
                     userJSON.getString("todo")
                 )
-                Log.d("poi",user.toString())
+                Log.d("poi", user.toString())
                 poiList.add(user)
             }
             poiAdapter.notifyDataSetChanged()

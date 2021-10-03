@@ -6,21 +6,24 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.misiontic.models.POI
 import com.example.misiontic.models.ToDoPOI
 import com.example.misiontic.adapters.ToDoPOIAdapter
 import com.example.misiontic.databinding.FragmentPoiDetailBinding
+import com.example.misiontic.viewmodel.POIviewModel
 import com.squareup.picasso.Picasso
 import org.json.JSONArray
 import org.json.JSONException
 
-class POIDetailFragment(var detailPOI: POI) : Fragment() {
+class POIDetailFragment() : Fragment() {
 
     private lateinit var binding: FragmentPoiDetailBinding
     private lateinit var todoAdapter: ToDoPOIAdapter
     private lateinit var todoList: ArrayList<ToDoPOI>
     private lateinit var titulo: String
+    private lateinit var model: POIviewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -36,20 +39,23 @@ class POIDetailFragment(var detailPOI: POI) : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        model = ViewModelProvider(requireActivity()).get(POIviewModel::class.java)
         initRecycler()
-        createDetailPOI()
-        with(this.context as AppCompatActivity) {
-            this.setTitle(titulo)
-        }
+        observeLiveData()
+
     }
 
-    private fun createDetailPOI() {
-        titulo = detailPOI.name
-        binding.temperaturaLorem.text = detailPOI.temperature
-        binding.infoLorem.text = detailPOI.detail
-        binding.ubicacionLorem.text = detailPOI.location
-        Picasso.get().load(detailPOI.image).into(binding.foto)
-        createTODO(detailPOI.todo)
+    private fun observeLiveData() {
+        model.getSelected().observe(viewLifecycleOwner, { poi ->
+            titulo=poi.name
+            Picasso.get().load(poi.image).into(binding.foto)
+            binding.infoLorem.text=poi.detail
+            binding.temperaturaLorem.text=poi.temperature
+            binding.ubicacionLorem.text=poi.location
+            createTODO(poi.todo)
+            requireActivity().setTitle(poi.name)
+        })
+
     }
 
     private fun initRecycler() {
