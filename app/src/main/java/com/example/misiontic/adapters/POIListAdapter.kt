@@ -1,9 +1,12 @@
-package com.example.misiontic
+package com.example.misiontic.adapters
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.RecyclerView
+import com.example.misiontic.models.POI
+import com.example.misiontic.R
+import com.example.misiontic.UI.POIDetailFragment
 import com.example.misiontic.databinding.ItemPoiListBinding
 import com.squareup.picasso.Picasso
 
@@ -21,7 +24,10 @@ class POIListAdapter (var poi:ArrayList<POI>): RecyclerView.Adapter<POIListAdapt
     override fun onBindViewHolder(holder: PoiHolder, position: Int) {
         holder.itemView.setOnClickListener(){
             val act=it.context as AppCompatActivity
-            act.supportFragmentManager.beginTransaction().replace(R.id.frag,POIDetailFragment(poi[position])).addToBackStack(null).commit()
+            act.supportFragmentManager.beginTransaction().replace(
+                R.id.frag,
+                POIDetailFragment(poi[position])
+            ).addToBackStack(null).commit()
 
         }
         with(holder){

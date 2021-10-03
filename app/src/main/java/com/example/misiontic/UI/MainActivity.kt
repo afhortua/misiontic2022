@@ -1,9 +1,10 @@
-package com.example.misiontic
+package com.example.misiontic.UI
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
+import com.example.misiontic.R
 import com.example.misiontic.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {

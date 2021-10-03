@@ -1,9 +1,10 @@
-package com.example.misiontic
+package com.example.misiontic.UI
 
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.preference.PreferenceFragmentCompat
+import com.example.misiontic.R
 
 class SettingsFragment : PreferenceFragmentCompat() {
 
@@ -16,6 +17,5 @@ class SettingsFragment : PreferenceFragmentCompat() {
         with(this.context as AppCompatActivity){
             this.setTitle("Ajustes")
         }
-
     }
 }

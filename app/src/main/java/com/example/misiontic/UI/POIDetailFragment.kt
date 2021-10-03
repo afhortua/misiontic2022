@@ -1,18 +1,19 @@
-package com.example.misiontic
+package com.example.misiontic.UI
 
 import android.os.Bundle
-import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.misiontic.models.POI
+import com.example.misiontic.models.ToDoPOI
+import com.example.misiontic.adapters.ToDoPOIAdapter
 import com.example.misiontic.databinding.FragmentPoiDetailBinding
 import com.squareup.picasso.Picasso
 import org.json.JSONArray
 import org.json.JSONException
-import java.io.IOException
 
 class POIDetailFragment(var detailPOI: POI) : Fragment() {
 

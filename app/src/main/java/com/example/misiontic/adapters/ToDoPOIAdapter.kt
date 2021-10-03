@@ -1,9 +1,9 @@
-package com.example.misiontic
+package com.example.misiontic.adapters
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.RecyclerView
+import com.example.misiontic.models.ToDoPOI
 import com.example.misiontic.databinding.ItemPoiTodoBinding
 import com.squareup.picasso.Picasso
 

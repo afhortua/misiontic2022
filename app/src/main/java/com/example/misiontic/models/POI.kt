@@ -1,4 +1,4 @@
-package com.example.misiontic
+package com.example.misiontic.models
 
 data class POI(
     val image: String,
