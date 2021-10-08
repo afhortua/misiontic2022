@@ -83,7 +83,7 @@ class POIListFragment() : Fragment() {
     }
 
     private fun createPOI() {
-        val data = loadData("poi_list.json")
+        val data = loadData("db.json")
         try {
             val poiJSON = JSONArray(data)
             for (i in 0 until poiJSON.length()) {

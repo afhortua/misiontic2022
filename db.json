@@ -1,0 +1,137 @@
+[
+  {
+    "image": "https://www.viajaporcolombia.com/images//recinto-manizales.jpg",
+    "name": "Recinto del Pensamiento",
+    "description": "Ubicado a 11 kilómetros de Manizales, cuenta con una extensión de 179 hectáreas. Ofrece una gran variedad de entornos naturales, como senderos, miradores, un observatorio de mariposas y un bosque orquídeas con más de 14 mil plantas.",
+    "location": "Manizales, Vía Panamericana",
+    "detail": "Hace más de 80 años este espacio fue un refugio para niños huérfanos. Actualmente es propiedad del Comité de Cafeteros de Caldas y busca ser un espacio propicio para el desarrollo y promoción de las familias cafeteras. \n\nEste espacio de 179 hectáreas es formado en su mayoría por una reserva natural. Allí se encuentran varios lugares rodeados de hermosa naturaleza.",
+    "temperature": "19°C",
+    "todo": [
+      {
+        "name": "Mirador de aves",
+        "todo": "Con 150 especies inmersas en un bosque de niebla. Destaca una variedad de colibrís.",
+        "image": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/15/40/3e/68/dsc09983-largejpg.jpg?w=1000&h=-1&s=1"
+      },
+      {
+        "name": "Senda de Oriente",
+        "todo": "Una obra de arte oriental, con un bosque miniatura de bonsáis y sakuras entregadas por Japón.",
+        "image": "https://media-cdn.tripadvisor.com/media/photo-s/07/41/52/a5/senda-de-oriente.jpg"
+      }
+    ]
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Cerro_Tutelar_del_Pipint%C3%A1_-_panor%C3%A1mica_de_Aguadas_02.jpg/800px-Cerro_Tutelar_del_Pipint%C3%A1_-_panor%C3%A1mica_de_Aguadas_02.jpg",
+    "name": "Aguadas",
+    "description": "Su centro histórico fue declarado Monumento Nacional en 1982. Uno de sus principales atractivos es el Festival Nacional de Pasillo así como el Cerro de Monserrate, donde se pueden apreciar los departamentos de Antioquia, Risaralda y Chocó.",
+    "location": "Aguadas, Caldas",
+    "detail": "Un pueblo típico ubicado en Caldas, es conocido como la Ciudad de las Brumas, por la constante niebla. Además de la fama por sus sombreros aguadeños, fabricados con iraca. \n\nEn este lugar se lleva a cabo el Festival Nacional de Pasillo, declarado Patrimonio Cultural de la Nación en 2005.",
+    "temperature": "15°C",
+    "todo": [
+      {
+        "name": "Monumento a la tejedora",
+        "todo": "Monumento a una tejedora de sombreros aguadeños. Ubicado en el Parque de la Habana.",
+        "image": "https://creciendoenelcamino.com/wp-content/uploads/2017/02/foto-13-768x512.jpg"
+      },
+      {
+        "name": "Iglesia San Antonio de Armas",
+        "todo": "Centro de peregrinación y culto al Santo patrono de los pobres. Aquí se conservan reliquias de casi 500 años.",
+        "image": "https://i1.wp.com/elturismoencolombia.com/wp-content/uploads/2019/01/aguadas-turismo-caldas-colombia-travel10.jpg?w=903&ssl=1"
+      },
+      {
+        "name": "Casa de la Cultura",
+        "todo": "Centro de la cultura aguadeña, sede del Museo Nacional del Sombrero, con 300 ejemplares de todo el país.",
+        "image": "https://aguadascaldas.micolombiadigital.gov.co/sites/aguadascaldas/content/files/000003/129_casa-de-la-cultura-francisco-giraldo_1024x600.png"
+      }
+    ]
+  },
+  {
+    "image": "https://blog.redbus.co/wp-content/uploads/2018/11/Nevado_del_Ruiz_-_Milton_H_Arias-768x356.jpg",
+    "name": "Parque Nacional Los Nevados",
+    "description": "Se encuentra ubicado en los departamentos de Risaralda, Tolima, Quindío y Caldas. Contiene varios nevados y otras formaciones naturales en clima frío, páramo y helado, además de mucha fauna y flora. Su temperatura oscila entre -3°C a 14°C",
+    "location": "Cordillera de los Andes Colombianos",
+    "detail": "Con una extensión de 58 mil hectáreas, en este Parque Nacional se ubican varios nevados, lagunas y glaciares. Hace parte de la jurisdicción de siete municipios en cuatro departamentos.  \n\nEs un importante recurso natural para el país, pues aquí nacen importantes ríos y lagunas cuyas aguas se utilizan para proveer a los habitantes de ciudades cercanas.",
+    "temperature": "-3°C a 14°C",
+    "todo": [
+      {
+        "name": "Volcán Nevado del Ruíz",
+        "todo": "Con una altitud de 5321 msnm, es también el más septentrional de los volcanes activos de Los Andes",
+        "image": "https://cr00.epimg.net/radio/imagenes/2020/08/26/manizales/1598464907_864804_1598465004_noticia_normal_recorte1.jpg"
+      },
+      {
+        "name": "Laguna del Otún",
+        "todo": "Un importante recurso natural, pues es la fuente hídrica de la ciudad de Pereira.",
+        "image": "https://blog.redbus.co/wp-content/uploads/2020/03/32365152525_5d1acbb839_b-696x522.jpg"
+      }
+    ]
+  },
+  {
+    "image": "https://fincasquindioya.com/wp-content/uploads/2017/01/parque_cafe_001-1536x864.jpg",
+    "name": "Parque del Café",
+    "description": "Es un parque temático inaugurado en 1995, es visitado por casi 920 mil turistas anualmente. Este lugar tiene una gran vista panorámica del departamento de Quindío. Contiene 40 atracciones mecánicas, acuáticas y temáticas. ",
+    "location": "Montenegro, Quindío",
+    "detail": "Este parque se ubica en el corregimiento de Pueblo Tapao, en Montenegro, Quindío. Contiene dos teleféricos, jardines, de café. tres montañas rusas y otra gran cantidad de atracciones y lugares de interés. \n\nFue fundado por la Federación Nacional de Cafeteros, actualmente pertenece a la Fundación Parque de la Cultura Cafetera, una entidad sin ánimo de lucro que se dedica a la preservación del patrimonio cultural e históricos del café en el país. ",
+    "temperature": "21°C",
+    "todo": [
+      {
+        "name": "Puente colgante",
+        "todo": "Esta imponente estructura une dos parque del parque. ",
+        "image": "https://live.staticflickr.com/7018/6507889397_93675c0b12_z.jpg"
+      },
+      {
+        "name": "Museo del Café",
+        "todo": "Un viaje desde el orígen, industrialización hasta la exportación del café en el país.",
+        "image": "https://quindioaventurero.co/wp-content/uploads/2019/04/plaza-quindio-min-1080x675.jpg"
+      },
+      {
+        "name": "Jardín de café",
+        "todo": "Se han cultivado gran variedad de especies de café de diferente procedencia en el mundo",
+        "image": "https://parquedelcafearmenia.com/wp-content/uploads/2018/11/jardin-de-variedades-de-cafe.jpg"
+      }
+    ]
+  },
+  {
+    "image": "https://cdn.colombia.com/images/v2/turismo/sitios-turisticos/manizales/ciudad-manizales-800.webp",
+    "name": "Manizales",
+    "description": "'La Capital Mundial del Café', capital del departamento de Caldas, con más de 400 mil habitantes, es la ciudad más importante de la región.",
+    "location": "Manizales, Caldas",
+    "detail": "Se ubica en la parte sur del departamento de Caldas. Con más de 400 mil habitantes, produce el 68% del PIB de la región. \n\nEsta ciudad se caracteriza por su gran cantidad de eventos de música, arte, danzas, literatura. entre otros",
+    "temperature": "17°C",
+    "todo": [
+      {
+        "name": "Feria de Manizales",
+        "todo": "Se realiza los primeros días de enero. Tiene sus raíces en la Feria de Abril en Sevilla, España.",
+        "image": "https://www.eltiempo.com/files/article_multimedia/uploads/2020/01/07/5e15185db0996.jpeg"
+      },
+      {
+        "name": "Antigua Estación del Cable",
+        "todo": "Estación del antiguo sistema Manizales-Mariquita(Tolima).",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Estaci%C3%B3n_El_Cable_%282%29.JPG/280px-Estaci%C3%B3n_El_Cable_%282%29.JPG"
+      },
+      {
+        "name": "Basílica N.S. del Rosario",
+        "todo": "Es la catedral más alta del país, con 113 mts de alto. En la torre se aprecia un vista panorámica de la ciudad.",
+        "image": "https://viajandox.com.co/uploads/Catedral%20Nuestra%20Se%C3%B1ora_1.jpg"
+      }
+    ]
+  },
+   {
+    "image": "https://cr00.epimg.net/radio/imagenes/2020/06/23/manizales/1592875891_959027_1592876051_noticia_normal_recorte1.jpg",
+    "name": "Salamina",
+    "description": "Fue fundada en 1825. Es conocida como 'La Ciudad Luz', dado que allí han nacido numerosos poetas, músicos, actores y escritores. Su arquitectura de casas de bahareque y tejas de barro es uno de sus principales atractivos.",
+    "location": "Salamina, Caldas",
+    "detail": "Este pintoresco pueblo de arquitectura paisa se encuentra ubicado al norte del departamento de Caldas. Fue fundado el 8 de junio de 1825. \n\n Es conocido también como 'Ciudad Madre de los Pueblos', pues aquí nacieron los fundadores de numerosos municipios del departamento, como Manizales, Filadelfia, Santa Rosa de Cabal, entre otros. ",
+    "temperature": "22°C",
+    "todo": [
+      {
+        "name": "Fuente Plaza de Bolívar",
+        "todo": "Esta fuente fue fabricada en Alemania como réplica de una ubicada en París, Francia.",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Salamina_main_plaza.JPG/800px-Salamina_main_plaza.JPG"
+      },
+      {
+        "name": "Bosque de Palma de Cera",
+        "todo": "Ubicado en el corregimiento de San Félix, éstas palmas tienen hasta 60 años de edad.",
+        "image": "https://caldasecotravel.com/wp-content/uploads/2017/04/DSC00710-1-1067x800.jpg"
+      }
+    ]
+  }
+]
