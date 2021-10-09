@@ -28,11 +28,20 @@
     <fragment
         android:id="@+id/POIDetailFragment"
         android:name="com.example.misiontic.UI.POIDetailFragment"
-        android:label="POIDetailFragment" />
+        android:label="POIDetailFragment" >
+        <action
+            android:id="@+id/action_POIDetailFragment_to_mapsFragment"
+            app:destination="@id/mapsFragment" />
+    </fragment>
     <fragment
         android:id="@+id/aboutFragment"
         android:name="com.example.misiontic.UI.AboutFragment"
         android:label="fragment_about"
         tools:layout="@layout/fragment_about" />
+    <fragment
+        android:id="@+id/mapsFragment"
+        android:name="com.example.misiontic.UI.MapsFragment"
+        android:label="fragment_maps"
+        tools:layout="@layout/fragment_maps" />
 
 </navigation>

@@ -7,12 +7,16 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.misiontic.R
 import com.example.misiontic.models.POI
 import com.example.misiontic.models.ToDoPOI
 import com.example.misiontic.adapters.ToDoPOIAdapter
 import com.example.misiontic.databinding.FragmentPoiDetailBinding
 import com.example.misiontic.viewmodel.POIviewModel
+import com.google.android.gms.maps.GoogleMap
+import com.google.android.gms.maps.SupportMapFragment
 import com.squareup.picasso.Picasso
 import org.json.JSONArray
 import org.json.JSONException
@@ -24,6 +28,7 @@ class POIDetailFragment() : Fragment() {
     //private lateinit var todoList: ArrayList<ToDoPOI>
     private lateinit var titulo: String
     private lateinit var model: POIviewModel
+    private lateinit var map:GoogleMap
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -42,7 +47,7 @@ class POIDetailFragment() : Fragment() {
         model = ViewModelProvider(requireActivity()).get(POIviewModel::class.java)
         //initRecycler()
         observeLiveData()
-
+        locationClick()
     }
 
     private fun observeLiveData() {
@@ -56,6 +61,12 @@ class POIDetailFragment() : Fragment() {
             requireActivity().setTitle(poi.name)
         })
 
+    }
+
+    private fun locationClick(){
+        binding.ubicacionLorem.setOnClickListener {
+            findNavController().navigate(R.id.action_POIDetailFragment_to_mapsFragment)
+        }
     }
 
     /*private fun initRecycler() {
