@@ -40,7 +40,7 @@ class POIDetailFragment() : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         model = ViewModelProvider(requireActivity()).get(POIviewModel::class.java)
-        initRecycler()
+        //initRecycler()
         observeLiveData()
 
     }
@@ -58,15 +58,15 @@ class POIDetailFragment() : Fragment() {
 
     }
 
-    private fun initRecycler() {
+    /*private fun initRecycler() {
         todoList = arrayListOf()
         val layout = LinearLayoutManager(this.context, LinearLayoutManager.HORIZONTAL, false)
         binding.rvPoiToDo.layoutManager = layout
         todoAdapter = ToDoPOIAdapter(todoList)
         binding.rvPoiToDo.adapter = todoAdapter
-    }
+    }*/
 
-    private fun createTODO(data: String?) {
+    /*private fun createTODO(data: String?) {
         try {
             val poiJSON = JSONArray(data)
             for (i in 0 until poiJSON.length()) {
@@ -82,6 +82,6 @@ class POIDetailFragment() : Fragment() {
         } catch (e: JSONException) {
             e.printStackTrace()
         }
-    }
+    }*/
 }
 
