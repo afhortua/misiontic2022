@@ -2,22 +2,25 @@ package com.example.misiontic.UI
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
+import androidx.lifecycle.ViewModelProvider
 import com.example.misiontic.R
 import com.example.misiontic.databinding.ActivityMainBinding
+import com.example.misiontic.viewmodel.POIviewModel
 
 class MainActivity : AppCompatActivity() {
 
-    private val transaction = supportFragmentManager.beginTransaction()
-
     private lateinit var binding: ActivityMainBinding
+    private lateinit var model:POIviewModel
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        model = ViewModelProvider(this).get(POIviewModel::class.java)
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
@@ -36,6 +39,11 @@ class MainActivity : AppCompatActivity() {
                 supportFragmentManager.beginTransaction().replace(R.id.frag, AboutFragment())
                     .addToBackStack(null).commit()
                 return true
+            }
+            R.id.action_refresh -> {
+                Log.d("PostFragment", "Action refresh")
+                model.getPois()
+                true
             }
             else -> super.onOptionsItemSelected(item)
         }

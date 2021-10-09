@@ -14,14 +14,10 @@ class POIListAdapter(
     private val onClick: (POI) -> Unit
 ) : RecyclerView.Adapter<POIListAdapter.PoiHolder>() {
 
-    private var poi: ArrayList<POI>
+    private var poiList: ArrayList<POI> = arrayListOf()
 
     inner class PoiHolder(val binding: ItemPoiListBinding) : RecyclerView.ViewHolder(binding.root) {
 
-    }
-
-    init{
-        poi = arrayListOf()
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PoiHolder {
@@ -31,10 +27,10 @@ class POIListAdapter(
 
     override fun onBindViewHolder(holder: PoiHolder, position: Int) {
         holder.itemView.setOnClickListener() {
-            onClick(poi[position])
+            onClick(poiList[position])
         }
         with(holder) {
-            with(poi[position]) {
+            with(poiList[position]) {
                 binding.tvName.text = this.name
                 binding.tvDescription.text = this.description
                 binding.tvLocation.text = this.location
@@ -43,12 +39,12 @@ class POIListAdapter(
         }
     }
 
-    override fun getItemCount(): Int = poi.size
+    override fun getItemCount(): Int = poiList.size
 
     fun setPOIS(pois: ArrayList<POI>?) {
-        this.poi.clear()
+        this.poiList.clear()
         pois?.let {
-            this.poi.addAll(it)
+            this.poiList.addAll(it)
         }
         notifyDataSetChanged()
     }

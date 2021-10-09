@@ -8,4 +8,10 @@
     <item
         android:id="@+id/itemAbout"
         android:title="Acerca de" />
+
+    <item
+        android:id="@+id/action_refresh"
+        android:title="Refresh"
+        android:icon="@drawable/ic_refresh_white_24px"
+        app:showAsAction="ifRoom" />
 </menu>
