@@ -20,8 +20,8 @@ import org.json.JSONException
 class POIDetailFragment() : Fragment() {
 
     private lateinit var binding: FragmentPoiDetailBinding
-    private lateinit var todoAdapter: ToDoPOIAdapter
-    private lateinit var todoList: ArrayList<ToDoPOI>
+    //private lateinit var todoAdapter: ToDoPOIAdapter
+    //private lateinit var todoList: ArrayList<ToDoPOI>
     private lateinit var titulo: String
     private lateinit var model: POIviewModel
 
