@@ -11,12 +11,17 @@ import com.example.misiontic.databinding.ItemPoiListBinding
 import com.squareup.picasso.Picasso
 
 class POIListAdapter(
-    var poi: ArrayList<POI>,
     private val onClick: (POI) -> Unit
 ) : RecyclerView.Adapter<POIListAdapter.PoiHolder>() {
 
+    private var poi: ArrayList<POI>
+
     inner class PoiHolder(val binding: ItemPoiListBinding) : RecyclerView.ViewHolder(binding.root) {
 
+    }
+
+    init{
+        poi = arrayListOf()
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PoiHolder {
@@ -39,4 +44,12 @@ class POIListAdapter(
     }
 
     override fun getItemCount(): Int = poi.size
+
+    fun setPOIS(pois: ArrayList<POI>?) {
+        this.poi.clear()
+        pois?.let {
+            this.poi.addAll(it)
+        }
+        notifyDataSetChanged()
+    }
 }

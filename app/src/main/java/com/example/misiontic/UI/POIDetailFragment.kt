@@ -46,13 +46,13 @@ class POIDetailFragment() : Fragment() {
     }
 
     private fun observeLiveData() {
-        model.getSelected().observe(viewLifecycleOwner, { poi ->
+        model.getSelected().observe(viewLifecycleOwner, { poi->
             titulo=poi.name
             Picasso.get().load(poi.image).into(binding.foto)
             binding.infoLorem.text=poi.detail
             binding.temperaturaLorem.text=poi.temperature
             binding.ubicacionLorem.text=poi.location
-            createTODO(poi.todo)
+            //createTODO(poi.todo)
             requireActivity().setTitle(poi.name)
         })
 

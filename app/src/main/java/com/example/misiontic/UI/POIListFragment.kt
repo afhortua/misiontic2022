@@ -23,7 +23,6 @@ class POIListFragment() : Fragment() {
 
     private lateinit var binding: FragmentPoiListBinding
     private lateinit var poiAdapter: POIListAdapter
-    private lateinit var poiList: ArrayList<POI>
     private lateinit var model: POIviewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -44,8 +43,11 @@ class POIListFragment() : Fragment() {
             this.setTitle("Caldas Turística")
         }
         model = ViewModelProvider(requireActivity()).get(POIviewModel::class.java)
+        model.getPois()
+        model.postsLiveData.observe(viewLifecycleOwner,{
+            poiAdapter.setPOIS(it)
+        })
         initRecycler()
-        createPOI()
     }
 
     private fun POIonClick(poi: POI) {
@@ -55,16 +57,15 @@ class POIListFragment() : Fragment() {
     }
 
     private fun initRecycler() {
-        poiList = arrayListOf()
         binding.rvList.layoutManager = LinearLayoutManager(this.context)
-        poiAdapter = POIListAdapter(poiList) { poi ->
+        poiAdapter = POIListAdapter() { poi ->
             POIonClick(poi)
         }
 
         binding.rvList.adapter = poiAdapter
     }
 
-    private fun loadData(inFile: String): String {
+    /*private fun loadData(inFile: String): String {
         var content = ""
         with(this.context as AppCompatActivity) {
             try {
@@ -95,7 +96,7 @@ class POIListFragment() : Fragment() {
                     userJSON.getString("location"),
                     userJSON.getString("detail"),
                     userJSON.getString("temperature"),
-                    userJSON.getString("todo")
+                    //userJSON.getString("todo")
                 )
                 Log.d("poi", user.toString())
                 poiList.add(user)
@@ -104,5 +105,5 @@ class POIListFragment() : Fragment() {
         } catch (e: JSONException) {
             e.printStackTrace()
         }
-    }
+    }*/
 }

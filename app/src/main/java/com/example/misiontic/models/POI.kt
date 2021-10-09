@@ -6,7 +6,6 @@ data class POI(
     val description: String,
     val location: String,
     val detail:String,
-    val temperature:String,
-    val todo: String
-
+    val temperature:String
+    //val todo: String
 )

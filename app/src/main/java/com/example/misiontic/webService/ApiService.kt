@@ -6,12 +6,7 @@ import retrofit2.http.GET
 
 interface ApiService {
 
-    @GET("posts")
-    fun requestPosts(): Call<List<POI>>
+    @GET("poi")
+    suspend fun requestPois(): ArrayList<POI>
 
-//    @GET("/users/{id}")
-//    suspend fun requestUser(@Path(value = "id") userId: Int): User
-//
-//    @GET("/comments")
-//    suspend fun requestComments(@Query(value = "postId") userId: Int): List<Comment>
 }
