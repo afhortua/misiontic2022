@@ -16,7 +16,7 @@ class POIviewModel : ViewModel() {
     private val selected = MutableLiveData<POI>()
     private var apiService = RetrofitFactory.apiService()
     private var pois = MutableLiveData<ArrayList<POI>>()
-    var postsLiveData: LiveData<ArrayList<POI>> = pois
+    var poisLiveData: LiveData<ArrayList<POI>> = pois
 
     fun getSelected(): LiveData<POI> = selected
 

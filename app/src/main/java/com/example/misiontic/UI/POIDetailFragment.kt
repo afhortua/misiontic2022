@@ -1,6 +1,8 @@
 package com.example.misiontic.UI
 
 import android.os.Bundle
+import android.text.SpannableString
+import android.text.style.UnderlineSpan
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -28,7 +30,6 @@ class POIDetailFragment() : Fragment() {
     //private lateinit var todoList: ArrayList<ToDoPOI>
     private lateinit var titulo: String
     private lateinit var model: POIviewModel
-    private lateinit var map:GoogleMap
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -56,14 +57,22 @@ class POIDetailFragment() : Fragment() {
             Picasso.get().load(poi.image).into(binding.foto)
             binding.infoLorem.text=poi.detail
             binding.temperaturaLorem.text=poi.temperature
-            binding.ubicacionLorem.text=poi.location
+            setLocationText(poi.location)
             //createTODO(poi.todo)
             requireActivity().setTitle(poi.name)
         })
+    }
 
+    private fun setLocationText(location: String) {
+        var text = SpannableString(location)
+        text.setSpan(UnderlineSpan(),0,text.length,4)
+        binding.ubicacionLorem.setText(text)
     }
 
     private fun locationClick(){
+        binding.ivLocationIcon.setOnClickListener {
+            findNavController().navigate(R.id.action_POIDetailFragment_to_mapsFragment)
+        }
         binding.ubicacionLorem.setOnClickListener {
             findNavController().navigate(R.id.action_POIDetailFragment_to_mapsFragment)
         }

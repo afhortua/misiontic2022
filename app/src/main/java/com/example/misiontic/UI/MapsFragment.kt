@@ -6,19 +6,27 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.lifecycle.ViewModelProvider
 import com.example.misiontic.R
+import com.example.misiontic.viewmodel.POIviewModel
 import com.google.android.gms.maps.CameraUpdateFactory
-import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.OnMapReadyCallback
 import com.google.android.gms.maps.SupportMapFragment
-import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.MarkerOptions
+import com.google.android.gms.maps.model.LatLng
 
 class MapsFragment : Fragment(){
 
-    private val callback = OnMapReadyCallback { googleMap ->
-        val coord = LatLng(5.039001,-75.4484922)
-        googleMap.addMarker(MarkerOptions().position(coord).title("Recinto del Pensamiento"))
+    private lateinit var coord: LatLng
+    private lateinit var title: String
+    private lateinit var model: POIviewModel
+
+    private val callback = OnMapReadyCallback{ googleMap ->
+        model.poisLiveData.observe(viewLifecycleOwner,{
+            for(POI in it){
+                googleMap.addMarker(MarkerOptions().position(LatLng(POI.latitude,POI.longitude)).title(POI.name))
+            }
+        })
         googleMap.animateCamera(
             CameraUpdateFactory.newLatLngZoom(coord,13f),
             2000,
@@ -40,8 +48,16 @@ class MapsFragment : Fragment(){
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         Log.d("View","created")
         super.onViewCreated(view, savedInstanceState)
+        model = ViewModelProvider(requireActivity()).get(POIviewModel::class.java)
+        observeLiveData()
         val mapFragment = childFragmentManager.findFragmentById(R.id.map) as SupportMapFragment?
         mapFragment?.getMapAsync(callback)
     }
 
+    private fun observeLiveData() {
+        model.getSelected().observe(viewLifecycleOwner, {
+            title=it.name
+            coord= LatLng(it.latitude,it.longitude)
+        })
+    }
 }

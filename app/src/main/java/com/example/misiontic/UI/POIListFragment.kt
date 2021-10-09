@@ -42,7 +42,7 @@ class POIListFragment() : Fragment() {
         }
         model = ViewModelProvider(requireActivity()).get(POIviewModel::class.java)
         model.getPois()
-        model.postsLiveData.observe(viewLifecycleOwner,{
+        model.poisLiveData.observe(viewLifecycleOwner,{
             poiAdapter.setPOIS(it)
         })
         initRecycler()
