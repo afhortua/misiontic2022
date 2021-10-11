@@ -49,7 +49,7 @@ class POIListFragment() : Fragment() {
     }
 
     private fun POIonClick(poi: POI) {
-        Log.d("onClick", "Click on: $poi")
+        //Log.d("onClick", "Click on: $poi")
         model.select(poi)
         findNavController().navigate(R.id.action_POIListFragment_to_POIDetailFragment)
     }

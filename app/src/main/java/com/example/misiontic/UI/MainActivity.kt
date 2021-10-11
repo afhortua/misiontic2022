@@ -41,7 +41,6 @@ class MainActivity : AppCompatActivity() {
                 return true
             }
             R.id.action_refresh -> {
-                Log.d("PostFragment", "Action refresh")
                 model.getPois()
                 true
             }

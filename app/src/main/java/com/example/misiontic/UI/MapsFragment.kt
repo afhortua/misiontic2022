@@ -46,7 +46,6 @@ class MapsFragment : Fragment(){
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        Log.d("View","created")
         super.onViewCreated(view, savedInstanceState)
         model = ViewModelProvider(requireActivity()).get(POIviewModel::class.java)
         observeLiveData()
