@@ -58,7 +58,6 @@ class POIDetailFragment() : Fragment() {
             binding.infoLorem.text=poi.detail
             binding.temperaturaLorem.text=poi.temperature
             setLocationText(poi.location)
-            //createTODO(poi.todo)
             requireActivity().setTitle(poi.name)
         })
     }
@@ -70,6 +69,7 @@ class POIDetailFragment() : Fragment() {
     }
 
     private fun locationClick(){
+        //se permite hacer click en el icono o texto de la ubicacion para abrir el mapa
         binding.ivLocationIcon.setOnClickListener {
             findNavController().navigate(R.id.action_POIDetailFragment_to_mapsFragment)
         }

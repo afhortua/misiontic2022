@@ -21,12 +21,18 @@ class MapsFragment : Fragment(){
     private lateinit var title: String
     private lateinit var model: POIviewModel
 
+    //la funcion callback se llama automaticament una vez el mapa esta creado en el fragment
+
     private val callback = OnMapReadyCallback{ googleMap ->
+        //se crean los marcadores en el mapa con todos los POI que se recuperaron del API
         model.poisLiveData.observe(viewLifecycleOwner,{
             for(POI in it){
-                googleMap.addMarker(MarkerOptions().position(LatLng(POI.latitude,POI.longitude)).title(POI.name))
+                googleMap.addMarker(MarkerOptions().
+                position(LatLng(POI.latitude,POI.longitude)).
+                title(POI.name))
             }
         })
+        //se ajusta el zoom en las coordenadas del POI seleccionado por el usuario
         googleMap.animateCamera(
             CameraUpdateFactory.newLatLngZoom(coord,13f),
             2000,
@@ -54,6 +60,7 @@ class MapsFragment : Fragment(){
     }
 
     private fun observeLiveData() {
+        //se obtiene el nombre y coordenadas el POI seleccionado por el usuario
         model.getSelected().observe(viewLifecycleOwner, {
             title=it.name
             coord= LatLng(it.latitude,it.longitude)

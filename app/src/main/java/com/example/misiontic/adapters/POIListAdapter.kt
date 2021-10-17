@@ -30,6 +30,7 @@ class POIListAdapter(
             onClick(poiList[position])
         }
         with(holder) {
+            //se reemplazan los datos del POI en el layout
             with(poiList[position]) {
                 binding.tvName.text = this.name
                 binding.tvDescription.text = this.description
@@ -40,6 +41,8 @@ class POIListAdapter(
     }
 
     override fun getItemCount(): Int = poiList.size
+
+    //Usada para cargar los POI obtenidos del servicio web desde ListFragment en initRecycler
 
     fun setPOIS(pois: ArrayList<POI>?) {
         this.poiList.clear()

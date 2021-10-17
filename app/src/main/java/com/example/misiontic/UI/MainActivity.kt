@@ -23,6 +23,8 @@ class MainActivity : AppCompatActivity() {
         model = ViewModelProvider(this).get(POIviewModel::class.java)
     }
 
+    //se crea el menu overflow de settings y about
+
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         menuInflater.inflate(R.menu.overflow, menu)
         return true

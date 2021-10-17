@@ -22,6 +22,7 @@ class POIListFragment() : Fragment() {
     private lateinit var binding: FragmentPoiListBinding
     private lateinit var poiAdapter: POIListAdapter
     private lateinit var model: POIviewModel
+    private lateinit var poiList : ArrayList<POI>
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -43,23 +44,24 @@ class POIListFragment() : Fragment() {
         model = ViewModelProvider(requireActivity()).get(POIviewModel::class.java)
         model.getPois()
         model.poisLiveData.observe(viewLifecycleOwner,{
+            //se carga en el adapter todos los poi del viewModel
             poiAdapter.setPOIS(it)
         })
         initRecycler()
     }
 
     private fun POIonClick(poi: POI) {
-        //Log.d("onClick", "Click on: $poi")
+        //al hacer click se carga el poi seleccionado en el viewModel y se abre el DetailFragment
         model.select(poi)
         findNavController().navigate(R.id.action_POIListFragment_to_POIDetailFragment)
     }
 
     private fun initRecycler() {
+        //se inicializa el RecyclerView
         binding.rvList.layoutManager = LinearLayoutManager(this.context)
         poiAdapter = POIListAdapter() { poi ->
             POIonClick(poi)
         }
-
         binding.rvList.adapter = poiAdapter
     }
 
@@ -86,18 +88,17 @@ class POIListFragment() : Fragment() {
         try {
             val poiJSON = JSONArray(data)
             for (i in 0 until poiJSON.length()) {
-                val userJSON = poiJSON.getJSONObject(i)
-                val user = POI(
-                    userJSON.getString("image"),
-                    userJSON.getString("name"),
-                    userJSON.getString("description"),
-                    userJSON.getString("location"),
-                    userJSON.getString("detail"),
-                    userJSON.getString("temperature"),
-                    //userJSON.getString("todo")
+                val poiJSON = poiJSON.getJSONObject(i)
+                val poi = POI(
+                    poiJSON.getString("image"),
+                    poiJSON.getString("name"),
+                    poiJSON.getString("description"),
+                    poiJSON.getString("location"),
+                    poiJSON.getString("detail"),
+                    poiJSON.getString("temperature")
                 )
-                Log.d("poi", user.toString())
-                poiList.add(user)
+                Log.d("poi", poi.toString())
+                poiList.add(poi)
             }
             poiAdapter.notifyDataSetChanged()
         } catch (e: JSONException) {

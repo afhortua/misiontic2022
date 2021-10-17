@@ -18,17 +18,25 @@ class POIviewModel : ViewModel() {
     private var pois = MutableLiveData<ArrayList<POI>>()
     var poisLiveData: LiveData<ArrayList<POI>> = pois
 
+    //se obtiene el POI seleccionado del RecyclerView
+
     fun getSelected(): LiveData<POI> = selected
+
+    //se guarda el POI seleccionado del RecyclerView
 
     fun select(poi: POI) {
         selected.value = poi
     }
+
+    //se obtienen todos los POI del servicio web
 
     fun getPois(){
         viewModelScope.launch {
             pois.value = requestPOIS()
         }
     }
+
+    //se hace la peticion al servicio de todos los POI y retorna un ArrayList
 
     private suspend fun requestPOIS(): ArrayList<POI>{
         return withContext(Dispatchers.IO){
